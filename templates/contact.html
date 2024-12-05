@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
@@ -12,6 +13,7 @@
   </head>
   <body>
     <!--================Header Menu Area =================-->
+    {% block content %}
     <header class="header_area">
       <div class="main_menu">
         <nav class="navbar navbar-expand-lg navbar-light">
@@ -65,7 +67,7 @@
     <section class="section-margin--small section-margin">
       <div class="container">
         <div class="d-none d-sm-block mb-5 pb-4">
-          Тут будет карта
+          {{html_map|safe|escape}}
         </div>
 
 
@@ -125,6 +127,7 @@
  
 
     <!--================ Start Footer Area =================-->
+    {% endblock %}
     <footer class="footer-area section-padding">
       <div class="container">
         <div class="row">
