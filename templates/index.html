@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+{% extends 'base.html' %}
+{% load static %}
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    {% load static %}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Sensive Blog - Home</title>
@@ -41,7 +42,7 @@
       </div>
     </header>
     <!--================Header Menu Area =================-->
-    
+    {% block content %}
     <main class="site-main">
       <!--================Hero Banner start =================-->  
       <section class="mb-30px">
@@ -239,5 +240,7 @@
     <!--================ End Footer Area =================-->
 
     <script src="{% static 'scripts.js' %}"></script>
+    {% endblock %}
   </body>
 </html>
+
