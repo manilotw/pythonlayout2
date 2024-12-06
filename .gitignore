@@ -137,3 +137,7 @@ dmypy.json
 
 # Cython debug symbols
 cython_debug/
+
+# Исключить шаблоны из static
+static/*.html
+static/**/*.html
